@@ -1,0 +1,55 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }}" class="footer-logo-img">
+                </div>
+                <p class="footer-description">{{ site.description }}</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <span>{{ site.data.owner.name }}, {{ site.data.owner.title }}</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:{{ site.business.phone }}">{{ site.business.phone }}</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:{{ site.business.email }}">{{ site.business.email }}</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/services' | relative_url }}">Services & Pricing</a></li>
+                    <li><a href="tel:{{ site.business.phone }}">Get Quote</a></li>
+                </ul>
+                
+                <div class="cta-section">
+                    <a href="tel:{{ site.business.phone }}" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call Now for Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+                <p>Professional lawn care serving the Fraser Valley</p>
+            </div>
+        </div>
+    </div>
+</footer> 

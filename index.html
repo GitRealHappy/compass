@@ -1,0 +1,171 @@
+---
+layout: default
+title: "Professional Lawn Care from Chilliwack to Surrey"
+description: "Compass Lawn Care & Maintenance provides quality lawn mowing, landscaping, and property maintenance services throughout the Fraser Valley. Call 604-768-8382 for your free quote."
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background">
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Professional Lawn Care from Chilliwack to Surrey</h1>
+            <p class="hero-subtitle">Quality lawn maintenance and landscaping services you can trust. Serving the Fraser Valley with professional care and attention to detail.</p>
+            <div class="hero-actions">
+                <a href="tel:{{ site.business.phone }}" class="btn btn-primary btn-large">
+                    <i class="fas fa-phone"></i>
+                    Get Your Free Quote
+                </a>
+                <a href="#services" class="btn btn-secondary btn-large">
+                    <i class="fas fa-leaf"></i>
+                    View Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview Section -->
+<section id="services" class="services-preview">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive lawn care and maintenance solutions for your property</p>
+        </div>
+        
+        <div class="services-grid">
+            {% assign featured_count = 0 %}
+            {% for category in site.data.services %}
+                {% for service in category.services %}
+                    {% if service.featured and featured_count < 6 %}
+                        {% include service-card.html service=service %}
+                        {% assign featured_count = featured_count | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        
+        <div class="services-cta">
+            <a href="{{ '/services' | relative_url }}" class="btn btn-outline btn-large">
+                <i class="fas fa-list"></i>
+                View All Services & Pricing
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas Section -->
+{% include service-area-map.html %}
+
+<!-- About Owner Section -->
+<section class="about-owner">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">Meet {{ site.data.owner.name }}</h2>
+                <p class="owner-title">{{ site.data.owner.title }}, {{ site.data.owner.company }}</p>
+                <p class="owner-bio">{{ site.data.owner.bio }}</p>
+                
+                <div class="owner-specialties">
+                    <h3>Specialties</h3>
+                    <ul class="specialties-list">
+                        {% for specialty in site.data.owner.specialties %}
+                            <li><i class="fas fa-check"></i> {{ specialty }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="owner-contact">
+                    <a href="tel:{{ site.business.phone }}" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Call {{ site.business.phone }}
+                    </a>
+                    <a href="mailto:{{ site.business.email }}" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Email Matt
+                    </a>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <div class="owner-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Trusted by homeowners throughout the Fraser Valley</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Matt does an excellent job on our lawn every week. Professional, reliable, and always leaves the property looking great. Highly recommend Compass Lawn Care!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <span>Surrey Homeowner</span>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Great service and fair pricing. Matt transformed our overgrown yard into something we're proud of. He's our go-to for all lawn maintenance needs."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Mike Chen</h4>
+                        <span>Chilliwack Homeowner</span>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Compass Lawn Care has been taking care of our property for over a year. Always professional, always on time, and the results speak for themselves."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Jennifer Rodriguez</h4>
+                        <span>Langley Homeowner</span>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+{% include contact-cta.html %} 

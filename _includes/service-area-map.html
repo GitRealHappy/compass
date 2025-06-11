@@ -1,0 +1,53 @@
+<section class="service-areas">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Proudly Serving the Fraser Valley</h2>
+            <p class="section-subtitle">Quality lawn care from Surrey to Chilliwack and everywhere in between</p>
+        </div>
+        
+        <div class="areas-grid">
+            <div class="area-section">
+                <div class="area-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>{{ site.data.service-areas.north_fraser.title }}</h3>
+                </div>
+                <p class="area-description">{{ site.data.service-areas.north_fraser.description }}</p>
+                <ul class="area-list">
+                    {% for area in site.data.service-areas.north_fraser.areas %}
+                        <li class="area-item {% if area.featured %}featured{% endif %}">
+                            <i class="fas fa-check"></i>
+                            {{ area.name }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="area-section">
+                <div class="area-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>{{ site.data.service-areas.south_fraser.title }}</h3>
+                </div>
+                <p class="area-description">{{ site.data.service-areas.south_fraser.description }}</p>
+                <ul class="area-list">
+                    {% for area in site.data.service-areas.south_fraser.areas %}
+                        <li class="area-item {% if area.featured %}featured{% endif %}">
+                            <i class="fas fa-check"></i>
+                            {{ area.name }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="coverage-note">
+            <div class="note-content">
+                <i class="fas fa-info-circle"></i>
+                <p>{{ site.data.service-areas.coverage_note }}</p>
+            </div>
+            <a href="tel:{{ site.business.phone }}" class="btn btn-primary">
+                <i class="fas fa-phone"></i>
+                Confirm Your Area
+            </a>
+        </div>
+    </div>
+</section> 

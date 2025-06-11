@@ -1,0 +1,33 @@
+north_fraser:
+  title: "North of Fraser River"
+  description: "Serving communities from Surrey to East Chilliwack"
+  areas:
+    - name: "Surrey"
+      featured: true
+    - name: "Langley"
+      featured: true
+    - name: "Aldergrove"
+      featured: true 
+    - name: "Abbotsford"
+      featured: true
+    - name: "Chilliwack"
+      featured: true
+    - name: "East Chilliwack"
+      featured: true
+
+south_fraser:
+  title: "South of Fraser River"
+  description: "Comprehensive coverage from Pitt Meadows to Mission"
+  areas:
+    - name: "Pitt Meadows"
+      featured: true
+    - name: "Maple Ridge"
+      featured: true
+    - name: "Mission"
+      featured: true
+    - name: "Deroche"
+      featured: true
+    - name: "Harrison"
+      featured: true
+
+coverage_note: "We proudly serve all communities in between these areas. Contact us to confirm service availability in your specific location." 

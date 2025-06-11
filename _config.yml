@@ -1,0 +1,50 @@
+# Site settings
+title: "Lawn Care & Maintenance"
+description: "Professional lawn care and maintenance services serving the Fraser Valley from Chilliwack to Surrey. Quality service you can trust."
+url: "https://compasslawncare.com"
+baseurl: ""
+
+# Business information
+business:
+  owner: "Matt McLean"
+  phone: "604-768-8382"
+  email: "compasslawncare1@gmail.com"
+  service_areas:
+    - "North of Fraser River: Surrey to East Chilliwack"
+    - "South of Fraser River: Pitt Meadows to Mission"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  services:
+    output: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+seo:
+  name: "Compass Lawn Care & Maintenance"
+  type: "LocalBusiness"
+  logo: "/assets/images/logo.png"
+  social:
+    - https://www.facebook.com/compasslawncare
+    - https://www.instagram.com/compasslawncare
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md 

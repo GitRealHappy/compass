@@ -1,0 +1,50 @@
+- category: "Core Lawn Services"
+  services:
+    - name: "Lawn Mowing"
+      description: "Regular mowing to keep your lawn healthy and well-maintained"
+      icon: "grass"
+      featured: true
+    - name: "Weed Eating/Edging"
+      description: "Clean edges for a professional, finished look"
+      icon: "trim"
+      featured: true
+    - name: "General Lawn Cleanup"
+      description: "Complete yard cleanup including debris removal"
+      icon: "cleanup"
+      featured: true
+    - name: "Thatch Removal"
+      description: "Remove built-up thatch for healthier grass growth"
+      icon: "rake"
+    - name: "Grass Seeding"
+      description: "Overseed bare spots and improve lawn density"
+      icon: "seed"
+      featured: true
+    - name: "Lawn Fertilizing"
+      description: "Seasonal fertilization for optimal lawn health"
+      icon: "fertilizer"
+      featured: true
+
+- category: "Maintenance Services"
+  services:
+    - name: "Trash/Rubbish Removal"
+      description: "Keep your property clean and tidy with regular cleanup"
+      icon: "trash"
+      featured: true
+    - name: "Hedge Trimming"
+      description: "Professional hedge and shrub trimming services"
+      icon: "hedge"
+    - name: "Small Tree Pruning"
+      description: "Expert pruning for small trees and bushes"
+      icon: "tree"
+
+- category: "Landscaping Services"
+  services:
+    - name: "Light Landscaping"
+      description: "Basic landscaping improvements and maintenance"
+      icon: "landscape"
+    - name: "Garden Bed Design/Installation"
+      description: "Custom garden bed design and professional installation"
+      icon: "garden"
+    - name: "Soil/Gravel/Rock/Bark Mulch Services"
+      description: "Complete removal and installation of landscaping materials"
+      icon: "materials" 

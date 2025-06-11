@@ -1,0 +1,14 @@
+name: "Matt McLean"
+title: "Owner"
+company: "Compass Lawn Care & Maintenance"
+phone: "604-768-8382"
+email: "compasslawncare1@gmail.com"
+bio: "With years of experience in lawn care and maintenance, Matt is dedicated to providing quality service and maintaining beautiful outdoor spaces throughout the Fraser Valley."
+certifications:
+  - "Professional Landscaping Certificate"
+  - "Small Business Operations"
+experience_years: 5
+specialties:
+  - "Residential Lawn Care"
+  - "Commercial Property Maintenance"
+  - "Landscape Design & Installation" 

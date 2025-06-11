@@ -1,0 +1,53 @@
+<section class="contact-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Transform Your Lawn?</h2>
+            <p class="cta-subtitle">Get your free quote today and discover why Fraser Valley homeowners trust Compass Lawn Care.</p>
+            
+            <div class="cta-actions">
+                <a href="tel:{{ site.business.phone }}" class="btn btn-primary btn-large">
+                    <i class="fas fa-phone"></i>
+                    Call {{ site.business.phone }}
+                </a>
+                <a href="mailto:{{ site.business.email }}" class="btn btn-secondary btn-large">
+                    <i class="fas fa-envelope"></i>
+                    Email Us
+                </a>
+            </div>
+            
+            <div class="quick-contact-form">
+                <h3>Quick Contact</h3>
+                <form action="https://formspree.io/f/xpzgknnp" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="">Select Service Needed</option>
+                            <option value="lawn-mowing">Lawn Mowing</option>
+                            <option value="lawn-cleanup">Lawn Cleanup</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="maintenance">General Maintenance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tell us about your project..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section> 
