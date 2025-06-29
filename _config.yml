@@ -10,8 +10,8 @@ business:
   phone: "604-768-8382"
   email: "compasslawncare1@gmail.com"
   service_areas:
-    - "North of Fraser River: Surrey to East Chilliwack"
-    - "South of Fraser River: Pitt Meadows to Mission"
+    - "Fraser Valley: Surrey to Chilliwack"
+    - "Extended Coverage: Pitt Meadows to Mission"
 
 # Build settings
 markdown: kramdown
@@ -47,4 +47,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - README.md 
+  - README.md

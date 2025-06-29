@@ -51,8 +51,6 @@ description: "Complete lawn care services including mowing, landscaping, and pro
                     </div>
                 </div>
             </div>
-            
-
         </div>
     </div>
 </section>
@@ -69,29 +67,12 @@ description: "Complete lawn care services including mowing, landscaping, and pro
             <div class="area-detailed">
                 <div class="area-header">
                     <i class="fas fa-map-marker-alt"></i>
-                    <h3>{{ site.data.service-areas.north_fraser.title }}</h3>
+                    <h3>{{ site.data.service-areas.service_areas.title }}</h3>
                 </div>
-                <p class="area-description">{{ site.data.service-areas.north_fraser.description }}</p>
+                <p class="area-description">{{ site.data.service-areas.service_areas.description }}</p>
                 
                 <div class="cities-grid">
-                    {% for area in site.data.service-areas.north_fraser.areas %}
-                        <div class="city-item {% if area.featured %}featured{% endif %}">
-                            <i class="fas fa-map-pin"></i>
-                            <span>{{ area.name }}</span>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-            
-            <div class="area-detailed">
-                <div class="area-header">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>{{ site.data.service-areas.south_fraser.title }}</h3>
-                </div>
-                <p class="area-description">{{ site.data.service-areas.south_fraser.description }}</p>
-                
-                <div class="cities-grid">
-                    {% for area in site.data.service-areas.south_fraser.areas %}
+                    {% for area in site.data.service-areas.service_areas.areas %}
                         <div class="city-item {% if area.featured %}featured{% endif %}">
                             <i class="fas fa-map-pin"></i>
                             <span>{{ area.name }}</span>
@@ -109,5 +90,3 @@ description: "Complete lawn care services including mowing, landscaping, and pro
         </div>
     </div>
 </section>
-
- 
