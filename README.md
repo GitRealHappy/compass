@@ -2,20 +2,30 @@
 
 A professional Jekyll website for Matt McLean's lawn care business serving the Fraser Valley from Chilliwack to Surrey.
 
+## 🌐 Live Site
+- **Production URL:** https://www.compasslawns.com
+- **GitHub Repository:** https://github.com/GitRealHappy/compass
+- **Local Development:** http://localhost:4000
+
 ## 🌿 Features
 
 - **Modern, Responsive Design** - Looks great on all devices
 - **SEO Optimized** - Built for search engines with local business schema
 - **Contact Forms** - Powered by Formspree for easy lead generation
-- **Service Areas** - Comprehensive coverage display
+- **Service Areas** - Comprehensive coverage display with interactive elements
 - **Click-to-Call** - Mobile-friendly phone number integration
 - **Professional Layout** - Clean, trustworthy design
+- **Custom Domain** - Professional domain with GitHub Pages hosting
+- **SSL Certificate** - Secure HTTPS connection
+- **Form Validation** - Client-side and server-side form validation
 
 ## 📱 Contact Information
 
 - **Owner:** Matt McLean
+- **Business:** Compass Lawn Care & Maintenance
 - **Phone:** 604-768-8382
 - **Email:** compasslawncare1@gmail.com
+- **Service Area:** Fraser Valley (Chilliwack to Surrey)
 
 ## 🚀 Quick Start
 
@@ -29,171 +39,352 @@ A professional Jekyll website for Matt McLean's lawn care business serving the F
 
 ### Setup
 
-1. Clone or download this repository
-2. Navigate to the project directory:
+1. Clone the repository:
    ```bash
-   cd compasslawncare
+   git clone https://github.com/GitRealHappy/compass.git
+   cd compass
    ```
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    bundle install
    ```
-4. Start the development server:
+3. Start the development server with live reload:
    ```bash
-   bundle exec jekyll serve
+   bundle exec jekyll serve --livereload
    ```
-5. Open your browser to `http://localhost:4000`
+4. Open your browser to `http://localhost:4000`
+
+### Development Commands
+
+```bash
+# Serve with drafts
+bundle exec jekyll serve --drafts
+
+# Build for production
+bundle exec jekyll build
+
+# Clean build artifacts
+bundle exec jekyll clean
+
+# Check for dependency updates
+bundle update
+```
+
+## 🏗️ Technical Architecture
+
+### Jekyll Configuration
+
+- **Jekyll Version:** 4.3.4
+- **Ruby Version:** 3.3.0
+- **Build Tool:** Bundler
+- **CSS Framework:** Custom CSS with Flexbox/Grid
+- **JavaScript:** Vanilla JS (no frameworks)
+- **Icons:** Font Awesome 6
+- **Fonts:** Inter (Google Fonts)
+
+### Build Process
+
+1. **Liquid Templating** - Dynamic content generation
+2. **Sass Compilation** - CSS preprocessing
+3. **Asset Pipeline** - Image optimization and minification
+4. **Static Site Generation** - Compiled to `_site/` directory
+5. **GitHub Pages Deployment** - Automatic build and deploy
 
 ## 📁 Project Structure
 
 ```
 compasslawncare/
-├── _config.yml          # Site configuration
-├── _data/               # Data files
-│   ├── services.yml     # Service listings
-│   ├── service-areas.yml # Coverage areas
-│   └── owner.yml        # Business owner info
-├── _includes/           # Reusable components
-│   ├── header.html      # Navigation
-│   ├── footer.html      # Site footer
-│   ├── service-card.html # Service display cards
-│   ├── contact-cta.html # Contact call-to-action
+├── _config.yml              # Site configuration
+├── CNAME                    # Custom domain configuration
+├── _data/                   # Data files (YAML)
+│   ├── services.yml         # Service listings with icons
+│   ├── service-areas.yml    # Coverage areas and descriptions
+│   └── owner.yml            # Business owner information
+├── _includes/               # Reusable components
+│   ├── header.html          # Navigation with mobile menu
+│   ├── footer.html          # Site footer with links
+│   ├── service-card.html    # Service display cards with icons
+│   ├── contact-cta.html     # Contact form (homepage)
 │   └── service-area-map.html # Service areas display
-├── _layouts/            # Page templates
-│   ├── default.html     # Base template
-│   └── page.html        # Content page template
-├── assets/              # Static files
-│   ├── css/style.css    # Main stylesheet
-│   ├── js/main.js       # JavaScript functionality
-│   └── images/          # Images and logos
-├── index.html           # Home page
-├── services.html        # Services & pricing page
-├── Gemfile             # Ruby dependencies
-└── README.md           # This file
+├── _layouts/                # Page templates
+│   ├── default.html         # Base template with meta tags
+│   └── page.html            # Content page template
+├── assets/                  # Static files
+│   ├── css/style.css        # Main stylesheet (1,200+ lines)
+│   ├── js/main.js           # JavaScript functionality
+│   └── images/              # Optimized images
+│       ├── hero.png         # Homepage hero image
+│       ├── logo.png         # Company logo
+│       ├── logo1.png        # Logo variant
+│       └── matt.jpeg        # Owner photo
+├── _site/                   # Generated site (ignore in git)
+├── index.html               # Homepage template
+├── services.html            # Services & pricing page
+├── Gemfile                  # Ruby dependencies
+├── Gemfile.lock            # Locked dependency versions
+└── README.md               # This documentation
 ```
 
-## ✏️ Customization
-
-### Updating Business Information
-
-Edit `_config.yml` to update:
-- Business name and description
-- Contact information
-- Service areas
-
-### Adding/Editing Services
-
-Edit `_data/services.yml` to:
-- Add new services
-- Update descriptions
-- Mark services as featured (shown on homepage)
-
-### Updating Service Areas
-
-Edit `_data/service-areas.yml` to:
-- Add new coverage areas
-- Update area descriptions
-- Mark areas as featured
-
-### Updating Owner Information
-
-Edit `_data/owner.yml` to:
-- Update bio and credentials
-- Change specialties
-- Add certifications
-
-## 📧 Contact Form Setup
-
-The website uses Formspree for contact forms. To set up your own:
-
-1. Sign up at [formspree.io](https://formspree.io)
-2. Create a new form
-3. Replace the form action URL in:
-   - `_includes/contact-cta.html`
-   - `services.html`
-4. Update the email address to: `compasslawncare1@gmail.com`
-
-## 🎨 Styling
-
-The website uses custom CSS with:
-- Modern color scheme (green primary, professional grays)
-- Responsive grid layouts
-- Font Awesome icons
-- Inter font family
-- Mobile-first design approach
+## 🎨 Design System
 
 ### Color Palette
-- Primary Green: `#22c55e`
-- Dark Green: `#16a34a`
-- Blue Accent: `#3b82f6`
-- Dark Gray: `#1f2937`
-- Light Gray: `#f9fafb`
+```scss
+:root {
+  --primary-green: #22c55e;
+  --dark-green: #16a34a;
+  --blue-accent: #3b82f6;
+  --dark-gray: #1f2937;
+  --medium-gray: #6b7280;
+  --light-gray: #f9fafb;
+  --white: #ffffff;
+}
+```
+
+### Typography
+- **Primary Font:** Inter (400, 500, 600, 700 weights)
+- **Headings:** Font weights 600-700
+- **Body Text:** Font weight 400-500
+- **Responsive Scale:** 14px mobile to 18px desktop base
+
+### Component Library
+- **Buttons:** Primary, secondary, outline variants
+- **Cards:** Service cards, testimonial cards, pricing cards
+- **Forms:** Multi-step forms with validation
+- **Navigation:** Responsive with mobile hamburger menu
+- **Grid System:** Custom CSS Grid for layouts
+
+## 📧 Contact Form System
+
+### FormSpree Integration
+- **Service:** Formspree.io
+- **Endpoint:** `https://formspree.io/f/xovwyzkg`
+- **Forms:** 2 forms (homepage and services page)
+- **Validation:** Required fields, email format, phone format
+- **Notifications:** Email alerts to compasslawncare1@gmail.com
+
+### Form Locations
+1. **Homepage Contact Form** (`_includes/contact-cta.html`)
+   - Quick contact form
+   - Basic information collection
+   
+2. **Services Page Form** (`services.html`)
+   - Detailed quote request form
+   - Service-specific options
+   - Timeline and property size selectors
+
+### Form Testing
+Monthly testing recommended:
+1. Submit test form with obvious test data
+2. Verify email notification received
+3. Check FormSpree dashboard for submission
+4. Test both forms (homepage and services page)
+
+## 🌐 Deployment & Hosting
+
+### GitHub Pages Configuration
+- **Host:** GitHub Pages
+- **Repository:** GitRealHappy/compass
+- **Branch:** main
+- **Custom Domain:** www.compasslawns.com
+- **SSL:** Automatic (Let's Encrypt)
+- **Build:** Automatic on push to main
+
+### DNS Configuration
+```
+# A Records for apex domain (compasslawns.com)
+@    A    185.199.108.153
+@    A    185.199.109.153
+@    A    185.199.110.153
+@    A    185.199.111.153
+
+# CNAME Record for www subdomain
+www  CNAME  GitRealHappy.github.io
+```
+
+### Custom Domain Setup
+1. **CNAME File:** Contains `www.compasslawns.com`
+2. **DNS Records:** Configured as above
+3. **GitHub Settings:** Custom domain configured in repository settings
+4. **SSL Certificate:** Automatically provisioned by GitHub
+
+## ✏️ Content Management
+
+### Updating Business Information
+Edit `_config.yml` to update:
+```yaml
+business:
+  name: "Compass Lawn Care & Maintenance"
+  phone: "604-768-8382"
+  email: "compasslawncare1@gmail.com"
+  address: "Fraser Valley, BC"
+```
+
+### Managing Services
+Edit `_data/services.yml`:
+```yaml
+- category: "Core Lawn Services"
+  services:
+    - name: "Lawn Mowing"
+      description: "Regular mowing to keep your lawn healthy"
+      icon: "grass"          # Maps to FontAwesome icon
+      featured: true         # Shows on homepage
+```
+
+### Service Icons
+Icons are defined in `_includes/service-card.html`:
+- `grass` → `fa-seedling` (Lawn Mowing)
+- `seed` → `fa-dot-circle` (Grass Seeding)
+- `trim` → `fa-cut` (Weed Eating)
+- `cleanup` → `fa-broom` (Cleanup)
+- `fertilizer` → `fa-flask` (Fertilizing)
+- And more...
+
+### Managing Service Areas
+Edit `_data/service-areas.yml`:
+```yaml
+north_fraser:
+  title: "North Fraser Valley"
+  description: "Comprehensive coverage..."
+  areas:
+    - name: "Chilliwack"
+      featured: true
+```
 
 ## 📱 Mobile Optimization
 
-- Responsive navigation with hamburger menu
-- Touch-friendly buttons and links
-- Optimized forms for mobile input
-- Click-to-call phone numbers
-- Compressed images and optimized loading
+### Responsive Design
+- **Mobile-first approach** - Designed for mobile, enhanced for desktop
+- **Breakpoints:** 
+  - Mobile: < 768px
+  - Tablet: 768px - 1024px
+  - Desktop: > 1024px
+- **Touch-friendly:** 44px minimum touch targets
+- **Performance:** Optimized images, lazy loading
 
-## 🔍 SEO Features
+### Mobile Features
+- **Click-to-call:** Phone numbers are clickable links
+- **Touch navigation:** Easy-to-use mobile menu
+- **Form optimization:** Large input fields, appropriate keyboards
+- **Fast loading:** Compressed images, minimal JavaScript
 
-- Local business schema markup
-- Optimized meta descriptions
-- Semantic HTML structure
-- Clean URLs with Jekyll
-- Sitemap generation
-- Fast loading times
+## 🔍 SEO & Performance
 
-## 🚀 Deployment Options
+### SEO Features
+- **Meta tags:** Title, description, keywords for each page
+- **Schema markup:** Local business structured data
+- **Semantic HTML:** Proper heading hierarchy, alt tags
+- **Clean URLs:** Jekyll generates SEO-friendly URLs
+- **Sitemap:** Automatically generated
+- **Robots.txt:** Search engine directives
 
-### GitHub Pages (Free)
-1. Push your code to a GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Your site will be available at `username.github.io/repo-name`
+### Performance Optimizations
+- **Static site generation:** Fast loading, no database queries
+- **Image optimization:** Compressed and appropriately sized images
+- **CSS optimization:** Single stylesheet, minimal unused CSS
+- **JavaScript minimal:** Only essential functionality
+- **CDN delivery:** GitHub Pages global CDN
 
-### Netlify (Recommended)
-1. Connect your GitHub repository to Netlify
-2. Netlify will automatically build and deploy your site
-3. Get a custom domain or use the provided netlify.app URL
-4. Forms will work automatically with Netlify Forms
+## 🔧 Maintenance & Updates
 
-### Custom Hosting
-1. Run `bundle exec jekyll build` to generate the `_site` folder
-2. Upload the contents of `_site` to your web hosting provider
-
-## 📊 Analytics Setup
-
-To add Google Analytics:
-1. Get your Google Analytics tracking ID
-2. Add it to `_config.yml` under a new `google_analytics` section
-3. The tracking code is already included in the default layout
-
-## 🔧 Maintenance
-
-### Regular Updates
-- Review and update service listings quarterly
-- Check contact information accuracy
-- Update testimonials as you receive them
-- Add new service areas as your business grows
+### Regular Maintenance Tasks
+- **Monthly:** Test contact forms
+- **Quarterly:** Review service listings and pricing
+- **Bi-annually:** Update testimonials and photos
+- **Annually:** Review and update business information
 
 ### Content Updates
-- Add seasonal service promotions
-- Update pricing information
-- Include before/after photo galleries
-- Add blog posts about lawn care tips
+To update content:
+1. **Services:** Edit `_data/services.yml`
+2. **Service Areas:** Edit `_data/service-areas.yml`
+3. **Owner Info:** Edit `_data/owner.yml`
+4. **Pages:** Edit `index.html` or `services.html`
+5. **Styles:** Edit `assets/css/style.css`
 
-## 📞 Support
+### Deployment Process
+```bash
+# 1. Make changes locally
+git add .
+git commit -m "Update [description]"
 
-For technical support or questions about this website:
-- Contact information is in the site header
-- Form submissions go to: compasslawncare1@gmail.com
+# 2. Test locally
+bundle exec jekyll serve
 
-## 📝 License
+# 3. Deploy to production
+git push origin main
+
+# 4. Verify deployment
+# Check https://www.compasslawns.com
+```
+
+## 🚨 Troubleshooting
+
+### Common Issues
+
+**Site not updating after push:**
+- Check GitHub Actions for build errors
+- Verify CNAME file is present
+- Clear browser cache
+
+**Forms not working:**
+- Verify FormSpree endpoint URL
+- Check spam folder for notifications
+- Test with different email address
+
+**Local development issues:**
+- Run `bundle update` to update dependencies
+- Check Ruby version compatibility
+- Clear Jekyll cache: `bundle exec jekyll clean`
+
+### Debugging Commands
+```bash
+# Check Jekyll version
+bundle exec jekyll --version
+
+# Validate site structure
+bundle exec jekyll doctor
+
+# Build with verbose output
+bundle exec jekyll build --verbose
+
+# Check for liquid errors
+bundle exec jekyll serve --trace
+```
+
+## 📊 Analytics & Monitoring
+
+### Performance Monitoring
+- **Page Load Speed:** Target < 3 seconds
+- **Mobile Usability:** Google Mobile-Friendly Test
+- **SEO Scores:** Google PageSpeed Insights
+- **Form Submissions:** Monitor via FormSpree dashboard
+
+### Suggested Analytics Setup
+1. **Google Analytics 4:** Track visitor behavior
+2. **Google Search Console:** Monitor search performance
+3. **FormSpree Analytics:** Track form conversion rates
+
+## 🔐 Security
+
+### Security Measures
+- **HTTPS:** Enforced via GitHub Pages
+- **Form Security:** FormSpree spam protection
+- **No Database:** Static site reduces attack surface
+- **Regular Updates:** Dependencies updated via Dependabot
+
+### Best Practices
+- **Strong Passwords:** For all associated accounts
+- **Two-Factor Authentication:** GitHub, FormSpree accounts
+- **Regular Backups:** Git repository serves as backup
+- **Access Control:** Limited repository access
+
+## 📝 License & Rights
 
 This website is custom-built for Compass Lawn Care & Maintenance. All content and design rights reserved.
 
+**Copyright © 2024 Compass Lawn Care & Maintenance**
+
 ---
 
-**Built with ❤️ for professional lawn care services in the Fraser Valley** 
+**Built with ❤️ for professional lawn care services in the Fraser Valley**
+
+**Last Updated:** June 28, 2025.
