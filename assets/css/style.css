@@ -153,7 +153,7 @@ p {
 }
 
 .btn-outline {
-    background: var(--glass-bg);
+    background: rgba(243, 244, 246, 0.8);
     color: var(--primary-green);
     border-color: var(--primary-green);
     backdrop-filter: blur(10px);
@@ -185,6 +185,13 @@ p {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #e5e7eb;
+}
+
+/* Hide Instagram link on desktop */
+@media (min-width: 769px) {
+    .nav-item:has(a[href*="instagram"]) {
+        display: none;
+    }
 }
 
 .navbar {
